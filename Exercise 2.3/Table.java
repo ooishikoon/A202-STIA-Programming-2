@@ -9,7 +9,7 @@ public class Table {
 	int tableLeg;
 	
 	void printTable() {
-		System.out.print("Please enter what table you want : ");
+		System.out.print("Please enter the table name : ");
 		String name = input.nextLine();
 		System.out.print("Please enter the colour of table : ");
 		String colour = input.nextLine();
