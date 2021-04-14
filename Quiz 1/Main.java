@@ -6,6 +6,11 @@ import Laptop.Laptop;
 		public static void main(String[] args) {
 			
 			Laptop a = new Laptop();
+			a.setBrand();
+			a.setColour();
+			a.setQuantity();
+			a.setWeight();
+			a.setPrice();
 
 			System.out.println("Brand : " + a.getBrand());
 			System.out.println("Colour : " + a.getColour());
