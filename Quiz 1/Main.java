@@ -1,7 +1,5 @@
 package LaptopScanner;
 
-import Laptop.Laptop;
-
 	public class Main {
 		public static void main(String[] args) {
 			
