@@ -54,7 +54,6 @@ import java.text.DecimalFormat;
 			return ("Taste : " + taste() +
 					"\nTotal Weight : RM " + calTotalWeight());
 		 }
-	
 	}
 	
 	//sub class for Apple
@@ -86,8 +85,7 @@ import java.text.DecimalFormat;
 		public double balance() {
 			return this.payment - this.calTotalPrice();
 		}
-		
-		
+	
 		public String toString() { //print info
 			return "Colour : " + colour() +
 					"\nTaste : " + super.taste() +
@@ -95,7 +93,6 @@ import java.text.DecimalFormat;
 					"\nPayment : RM " + getPayment() +
 					"\nBalance : RM " + balance();
 		}
-	
 	}
 		
 	//sub class for Apple
