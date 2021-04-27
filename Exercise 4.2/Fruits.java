@@ -6,19 +6,19 @@ import java.text.DecimalFormat;
 		private static DecimalFormat df2 = new DecimalFormat("#.##"); 
 		String name;
 			
-			public Fruits(String name) {
-				this.name = name;
-				System.out.println(this.name);
-				System.out.println(name + " constructor is invoked.");
-			}
+		public Fruits(String name) {
+			this.name = name;
+			System.out.println(this.name);
+			System.out.println(name + " constructor is invoked.");
+		}
 				
-			public String getName() {
-				return name;
-			 }
+		public String getName() {
+			return name;
+		 }
 				
-			public String toString() {
-				return "\nEat more "+ name + " will get a strong constitution.";
-			 }		
+		public String toString() {
+			return "\nEat more "+ name + " will get a strong constitution.";
+		 }		
 	}
 	
 	class Apple extends Fruits {
