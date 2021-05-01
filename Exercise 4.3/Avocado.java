@@ -28,11 +28,11 @@ public class Avocado extends Fruit {
 		return grams * carbs ;
 	}
 	
-	public String printBenefits() {
+	public String printBenefits() {		//overriding method
 		return "Avocados are good source of potassium and are low in sodium, which helps keep blood pressure stable.";
 	}
 	
-	public String toString() {
+	public String toString() {	//overriding method
 		 return super.toString() +
 				"\nTotal Nutrients : " + df2.format(calTotalNutrients()) + 
 				"\nTotal Calories : " + df2.format(calTotalCalories(200)) +
