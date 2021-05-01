@@ -38,7 +38,7 @@ public class GreenApple extends Apple{
 				"\nColour : " + getColour() +
 		 		"\nTotal Price : RM " + df2.format(calTotalPrice(4.99,10)) +
 		 		"\nPrice of a " + getName() + " per weight is RM " + df2.format(calPricePerWeight()) + "/kg" +
-		 		"\nVitamin C contain in a " + getName() + " is " + df2.format(calVitCPerWeight(15));
+		 		"\nVitamin C contain in a " + getName() + " is " + df2.format(calVitCPerWeight(15)) + " mcg";
 
 	}
 
