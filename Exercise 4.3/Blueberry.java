@@ -25,11 +25,11 @@ public class Blueberry extends Fruit{
 		return (calGrowth(tallOri, tallCurrent) * 12) / maxgrowth;
 	}
 	
-	public String printBenefits() {
+	public String printBenefits() {		//overriding method
 		return "Blueberries can help heart health, bone strength, skin health, blood pressure, diabetes management, cancer prevention, and mental health.";
 	}
 
-	public String toString() {
+	public String toString() {	//overriding method
 		 return super.toString() +
 				"\nTall of Blueberry tree growth in a month (in cm) : " + calGrowth(30, 35) + " cm" +
 				"\nEstimated age of Blueberry tree is in between : " + calMinAge(9) + " to " + calMaxAge() + " years." +
