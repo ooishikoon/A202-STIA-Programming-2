@@ -18,11 +18,11 @@ public class Main {
 		System.out.println(obj3);
 		System.out.println();
 		
-		Avocado obj4 = new Avocado("Avocado", 200, 0.0657);
+		Avocado obj4 = new Avocado("Avocado", 200, 0.0657, 0.15);
 		System.out.println(obj4);
 		System.out.println();
 		
-		Blueberry obj5 = new Blueberry("Blueberry", 250, 2.35);
+		Blueberry obj5 = new Blueberry("Blueberry", 250, 2.35, 0.22);
 		System.out.println(obj5);
 		System.out.println();
 	}
