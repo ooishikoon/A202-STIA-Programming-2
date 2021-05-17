@@ -10,12 +10,14 @@ public class Avocado extends Fruit{
 	
 	private double grams;
 	private double Carbs;
-	double totalCarbs;
+	private double totalCarbs;
+	private double price, disc;
 
-	public Avocado(String name, double g, double c) {		//constructor for sub class
+	public Avocado(String name, double g, double c, double p) {		//constructor for sub class
 		super(name);	//inherit data,method from super class
 		grams = g;
 		Carbs = c;
+		price = p;
 		
 		System.out.print("Please enter the grams of avocado : ");
 		grams = input.nextDouble();
@@ -41,6 +43,10 @@ public class Avocado extends Fruit{
 		else {
 			System.out.println("Invalid input. Please enter a valid Carbsmber.");
 		}
+		
+			Discount avd = new AvocadoDiscount(); 
+			System.out.println("Discount: " + avd.rateOfDiscount()); 
+			disc = avd.rateOfDiscount();
 	}
 	
 	public double Carbs() {
@@ -55,10 +61,16 @@ public class Avocado extends Fruit{
 		return totalCarbs = Carbs * gg * q;
 	}
 	
+	public double totalPrice() {
+		return (price * grams) * (1 - disc);
+	}
+	
+	
 	public String toString() {
 		return "\n==========Carbohydrates==========" +
 				"\nFruit name\t\t: " + getName() +
 				"\nTotal Carbohydrates\t: " + df2.format(totalCarbs) +
+				"\nTotal Price\t\t: RM " + df2.format(totalPrice()) +
 				"\n============THANK YOU============";
 	}
 	
