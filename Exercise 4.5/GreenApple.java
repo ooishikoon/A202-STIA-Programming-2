@@ -51,7 +51,7 @@ public class GreenApple extends Apple {
 		
 		public String paymentDetails() {
 			return "\n==========Payment==========" + 
-					"\nTotal price\t: RM " + totalprice +
+					"\nTotal price\t: RM " + df2.format(totalprice) +
 					"\nBalance\t\t: RM " + df2.format(calBalance());
 		}
 
