@@ -10,12 +10,13 @@ public class Blueberry extends Fruit{
 	
 	private double grams;
 	private double calories;
-	double totalCal;
+	private double totalCal, price, disc;
 
-	public Blueberry(String name, double g, double c) {		//constructor for sub class
+	public Blueberry(String name, double g, double c, double p) {		//constructor for sub class
 		super(name);	//inherit data,method from super class
 		grams = g;
 		calories = c;
+		price = p;
 		
 		System.out.print("Please enter the grams of blueberry : ");
 		grams = input.nextDouble();
@@ -41,6 +42,10 @@ public class Blueberry extends Fruit{
 		else {
 			System.out.println("Invalid input. Please enter a valid number.");
 		}
+		
+		Discount bd = new AvocadoDiscount(); 
+		System.out.println("Discount: " + bd.rateOfDiscount()); 
+		disc = bd.rateOfDiscount();
 	}
 	
 	public double calories() {
@@ -55,10 +60,15 @@ public class Blueberry extends Fruit{
 		return totalCal = calories * gg * q;
 	}
 	
+	public double totalPrice() {
+		return (price * grams) * (1 - disc);
+	}
+	
 	public String toString() {
 		return "\n==========Calories==========" +
 				"\nFruit name\t: " + getName() +
 				"\nTotal Calories\t: " + totalCal +
+				"\nTotal Price\t: RM " + df2.format(totalPrice()) +
 				"\n==========THANK YOU==========";
 	}
 	
