@@ -44,7 +44,7 @@ public class Avocado extends Fruit{
 			System.out.println("Invalid input. Please enter a valid Carbsmber.");
 		}
 		
-			Discount avd = new AvocadoDiscount(); 
+			Discount avd = new BlueberryDiscount(); 
 			System.out.println("Discount: " + avd.rateOfDiscount()); 
 			disc = avd.rateOfDiscount();
 	}
