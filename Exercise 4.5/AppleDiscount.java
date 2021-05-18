@@ -32,7 +32,7 @@ class AvocadoDiscount implements Discount{
 		return 0.12f;
 	}
 	
-} //end class DurianDiscount
+} //end class AvocadoDiscount
 
 
 class BlueberryDiscount implements Discount{
@@ -41,4 +41,4 @@ class BlueberryDiscount implements Discount{
 		return 0.18f;
 	}
 	
-} //end class MangoDiscount
+} //end class BlueberryDiscount
