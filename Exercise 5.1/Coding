@@ -1,0 +1,120 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Calculation {
+
+	private JFrame frame;
+	private JButton AddButton;
+	private JButton MinusButton;
+	private JLabel AnswerLabel;
+	private JTextField textFieldAnswer;
+	private JTextField textFieldNum1;
+	private JTextField textFieldNum2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculation window = new Calculation();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Calculation() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		AddButton = new JButton("ADD");
+		AddButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int num1, num2, ans;
+			
+				try {
+					num1 = Integer.parseInt(textFieldNum1.getText());
+					num2 = Integer.parseInt(textFieldNum2.getText());
+					
+					ans = num1 + num2;
+					textFieldAnswer.setText(Integer.toString(ans));
+					
+				} catch(Exception e1) {
+					JOptionPane.showMessageDialog(null, "Invalid number. Please enter again.");
+				}
+			}
+		});
+		AddButton.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		AddButton.setBounds(84, 108, 89, 23);
+		frame.getContentPane().add(AddButton);
+		
+		MinusButton = new JButton("MINUS");
+		MinusButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int num1, num2, ans;
+				
+				try {
+					num1 = Integer.parseInt(textFieldNum1.getText());
+					num2 = Integer.parseInt(textFieldNum2.getText());
+					
+					ans = num1 - num2;
+					textFieldAnswer.setText(Integer.toString(ans));
+					
+				} catch(Exception e1) {
+					JOptionPane.showMessageDialog(null, "Invalid number. Please enter again.");
+				}
+			}
+		});
+		MinusButton.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		MinusButton.setBounds(232, 108, 89, 23);
+		frame.getContentPane().add(MinusButton);
+		
+		AnswerLabel = new JLabel("ANSWER");
+		AnswerLabel.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		AnswerLabel.setBounds(100, 180, 73, 14);
+		frame.getContentPane().add(AnswerLabel);
+		
+		textFieldAnswer = new JTextField();
+		textFieldAnswer.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		textFieldAnswer.setBounds(232, 177, 86, 20);
+		frame.getContentPane().add(textFieldAnswer);
+		textFieldAnswer.setColumns(10);
+		
+		textFieldNum1 = new JTextField();
+		textFieldNum1.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		textFieldNum1.setBounds(84, 47, 86, 20);
+		frame.getContentPane().add(textFieldNum1);
+		textFieldNum1.setColumns(10);
+		
+		textFieldNum2 = new JTextField();
+		textFieldNum2.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		textFieldNum2.setBounds(232, 47, 86, 20);
+		frame.getContentPane().add(textFieldNum2);
+		textFieldNum2.setColumns(10);
+	}
+
+}
